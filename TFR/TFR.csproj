@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>delete.ico</ApplicationIcon>
+    <SignAssembly>False</SignAssembly>
+    <Title>Temporary File Remover</Title>
+    <Authors>Alfredo Pinto Molina</Authors>
+    <Product>Temporary File Remover</Product>
+    <Description>Temporary File Remover (TFR) is a console application designed to help you regularly delete temporary files and folders on your system. It reads a list of file paths from a specified text-based paths file and deletes those files and the folders inside of them, optionally skipping confirmation prompts.</Description>
+    <Copyright>Alfredo Pinto Molina</Copyright>
+    <PackageProjectUrl>https://github.com/proteo5/tfr</PackageProjectUrl>
+    <PackageIcon>delete.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/proteo5/TFR.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0</Version>
+    <AssemblyVersion>1.0</AssemblyVersion>
+    <FileVersion>1.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="delete.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cocona" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="delete.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="paths.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
